@@ -19,7 +19,7 @@ const GAMES = [
     icon: "icons/连线2026.png"
   },
   {
-    url:  "数独2026/index.html",
+    url:  "SD2026/index.html",
     name: "数独2026",
     desc: "基础数独规则，导线上任意两个相邻单元格的差值必须>=4。。",
     icon: "icons/数独2026.png"
