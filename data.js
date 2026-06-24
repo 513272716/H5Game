@@ -29,5 +29,12 @@ const GAMES = [
     name: "连线2048",
     desc: "从起点1出发,经过全部格子，且运算结果为2048。",
     icon: "icons/连线2048.png"
+  },
+  {
+    url:  "TQ/index.html",
+    name: "弹球",
+    desc: "拖动发射器到任意一条边安装后点击发射。",
+    icon: "icons/弹球.png"
   }
+
 ];
