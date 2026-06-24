@@ -13,7 +13,7 @@
 
 const GAMES = [
   {
-    url:  "https://example.com/game1/index.html",
+    url:  "LX2026/index.html",
     name: "连线2026",
     desc: "连线必须连通所有可用网格。",
     icon: "icons/连线2026.png"
@@ -25,7 +25,7 @@ const GAMES = [
     icon: "icons/数独2026.png"
   },
   {
-    url:  "https://example.com/game3/index.html",
+    url:  "LX2048/index.html",
     name: "连线2048",
     desc: "从起点1出发,经过全部格子，且运算结果为2048。",
     icon: "icons/连线2048.png"
