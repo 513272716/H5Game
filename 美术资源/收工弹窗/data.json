@@ -1,0 +1,142 @@
+{
+    "original_file": "收工弹窗.png",
+    "original_size": {
+        "width": 1536,
+        "height": 1024
+    },
+    "elements": [
+        {
+            "id": 1,
+            "files": {
+                "raw_box": "原图/box_1.png",
+                "sliced_ui": "切图/ui_1.png"
+            },
+            "box_coordinates": {
+                "x": 49,
+                "y": 17,
+                "width": 735,
+                "height": 943
+            },
+            "ui_absolute_coordinates": {
+                "x": 55,
+                "y": 22,
+                "width": 726,
+                "height": 935
+            }
+        },
+        {
+            "id": 2,
+            "files": {
+                "raw_box": "原图/box_2.png",
+                "sliced_ui": "切图/ui_2.png"
+            },
+            "box_coordinates": {
+                "x": 838,
+                "y": 41,
+                "width": 638,
+                "height": 158
+            },
+            "ui_absolute_coordinates": {
+                "x": 866,
+                "y": 42,
+                "width": 579,
+                "height": 156
+            }
+        },
+        {
+            "id": 3,
+            "files": {
+                "raw_box": "原图/box_3.png",
+                "sliced_ui": "切图/ui_3.png"
+            },
+            "box_coordinates": {
+                "x": 810,
+                "y": 215,
+                "width": 679,
+                "height": 359
+            },
+            "ui_absolute_coordinates": {
+                "x": 817,
+                "y": 221,
+                "width": 665,
+                "height": 348
+            }
+        },
+        {
+            "id": 4,
+            "files": {
+                "raw_box": "原图/box_4.png",
+                "sliced_ui": "切图/ui_4.png"
+            },
+            "box_coordinates": {
+                "x": 810,
+                "y": 591,
+                "width": 320,
+                "height": 133
+            },
+            "ui_absolute_coordinates": {
+                "x": 816,
+                "y": 597,
+                "width": 308,
+                "height": 122
+            }
+        },
+        {
+            "id": 5,
+            "files": {
+                "raw_box": "原图/box_5.png",
+                "sliced_ui": "切图/ui_5.png"
+            },
+            "box_coordinates": {
+                "x": 1141,
+                "y": 591,
+                "width": 347,
+                "height": 133
+            },
+            "ui_absolute_coordinates": {
+                "x": 1147,
+                "y": 597,
+                "width": 334,
+                "height": 122
+            }
+        },
+        {
+            "id": 6,
+            "files": {
+                "raw_box": "原图/box_6.png",
+                "sliced_ui": "切图/ui_6.png"
+            },
+            "box_coordinates": {
+                "x": 917,
+                "y": 737,
+                "width": 454,
+                "height": 144
+            },
+            "ui_absolute_coordinates": {
+                "x": 924,
+                "y": 742,
+                "width": 441,
+                "height": 133
+            }
+        },
+        {
+            "id": 7,
+            "files": {
+                "raw_box": "原图/box_7.png",
+                "sliced_ui": "切图/ui_7.png"
+            },
+            "box_coordinates": {
+                "x": 902,
+                "y": 891,
+                "width": 488,
+                "height": 93
+            },
+            "ui_absolute_coordinates": {
+                "x": 912,
+                "y": 895,
+                "width": 468,
+                "height": 82
+            }
+        }
+    ]
+}
