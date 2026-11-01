@@ -1,0 +1,632 @@
+{
+  "format": "json",
+  "runtime": "single_player_workday_retry",
+  "global_configs": {
+    "run_mode": "single_player_workday_retry",
+    "save_mode": "local_only",
+    "start_day_index": 1,
+    "initial_feed_grant": 100,
+    "daily_completion_feed_reward": 100,
+    "caught_feed_penalty_base": 50,
+    "feed_insufficient_action": "game_over",
+    "feed_minimum": 0,
+    "start_game_minutes": 540,
+    "base_work_end_game_minutes": 1110,
+    "normal_clock_minutes_per_real_second": 1,
+    "midnight_game_minutes": 1440,
+    "portal_transition_seconds": 0.25,
+    "gate_interaction_seconds": 1.2,
+    "gate_open_after_work_end": true,
+    "gate_click_before_work_end_action": "ignore",
+    "gate_work_reward_feed": 50,
+    "gate_work_reward_ad_daily_limit": 1,
+    "mischief_value_cap": 100,
+    "mischief_value_catch_gain": 20,
+    "boss_patrol_requires_player_at_workstation": true,
+    "boss_patrol_workstation_map_id": "MAP001",
+    "boss_patrol_away_action": "catch"
+  },
+  "game_library": {
+    "library_id": "LIB001",
+    "name": "默认摸鱼游戏库",
+    "games": [
+      {
+        "minigame_id": "MG001",
+        "enabled": true
+      },
+      {
+        "minigame_id": "MG002",
+        "enabled": true
+      },
+      {
+        "minigame_id": "MG003",
+        "enabled": true
+      },
+      {
+        "minigame_id": "MG004",
+        "enabled": true
+      }
+    ]
+  },
+  "game_modes": {
+    "mode_id": "random",
+    "name": "随机模式",
+    "selection_source": "game_library",
+    "selection_timing": "on_workday_start",
+    "selection_count": 3,
+    "allow_duplicate": false,
+    "duplicate_scope": "within_workday",
+    "reshuffle_on_new_workday": true
+  },
+  "characters": [
+    {
+      "character_id": "C001",
+      "name": "林小满",
+      "role": "player",
+      "base_move_speed_mps": 2.4
+    }
+  ],
+  "bosses": [
+    {
+      "boss_id": "M001",
+      "name": "老板",
+      "behavior_type": "route_patrol",
+      "move_speed_mps": 1.6,
+      "vision_distance_m": 4.5,
+      "vision_angle_degrees": 360,
+      "hearing_radius_m": 3,
+      "last_seen_search_seconds": 0,
+      "patrol_segments": [
+        {
+          "min_day": 1,
+          "max_day": 3,
+          "first_delay_seconds": [60, 90],
+          "repeat_delay_seconds": [420, 600],
+          "caught_feed_penalty": 60,
+          "overtime_minutes": 10,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 50 },
+            { "map_id": "MAP003", "weight": 20 },
+            { "map_id": "MAP004", "weight": 20 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        },
+        {
+          "min_day": 4,
+          "max_day": 7,
+          "first_delay_seconds": [55, 85],
+          "repeat_delay_seconds": [390, 570],
+          "caught_feed_penalty": 60,
+          "overtime_minutes": 10,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 50 },
+            { "map_id": "MAP003", "weight": 20 },
+            { "map_id": "MAP004", "weight": 20 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        },
+        {
+          "min_day": 8,
+          "max_day": 14,
+          "first_delay_seconds": [50, 80],
+          "repeat_delay_seconds": [360, 540],
+          "caught_feed_penalty": 70,
+          "overtime_minutes": 15,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 50 },
+            { "map_id": "MAP003", "weight": 20 },
+            { "map_id": "MAP004", "weight": 20 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        },
+        {
+          "min_day": 15,
+          "max_day": 21,
+          "first_delay_seconds": [45, 75],
+          "repeat_delay_seconds": [330, 510],
+          "caught_feed_penalty": 70,
+          "overtime_minutes": 20,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 52 },
+            { "map_id": "MAP003", "weight": 18 },
+            { "map_id": "MAP004", "weight": 20 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        },
+        {
+          "min_day": 22,
+          "max_day": 30,
+          "first_delay_seconds": [40, 70],
+          "repeat_delay_seconds": [300, 390],
+          "caught_feed_penalty": 80,
+          "overtime_minutes": 25,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 54 },
+            { "map_id": "MAP003", "weight": 17 },
+            { "map_id": "MAP004", "weight": 19 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        },
+        {
+          "min_day": 31,
+          "max_day": 44,
+          "first_delay_seconds": [35, 65],
+          "repeat_delay_seconds": [300, 390],
+          "caught_feed_penalty": 80,
+          "overtime_minutes": 30,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 56 },
+            { "map_id": "MAP003", "weight": 16 },
+            { "map_id": "MAP004", "weight": 18 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        },
+        {
+          "min_day": 45,
+          "max_day": 59,
+          "first_delay_seconds": [30, 60],
+          "repeat_delay_seconds": [300, 360],
+          "caught_feed_penalty": 90,
+          "overtime_minutes": 35,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 58 },
+            { "map_id": "MAP003", "weight": 15 },
+            { "map_id": "MAP004", "weight": 17 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        },
+        {
+          "min_day": 60,
+          "max_day": 74,
+          "first_delay_seconds": [25, 55],
+          "repeat_delay_seconds": [300, 360],
+          "caught_feed_penalty": 90,
+          "overtime_minutes": 40,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 60 },
+            { "map_id": "MAP003", "weight": 14 },
+            { "map_id": "MAP004", "weight": 16 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        },
+        {
+          "min_day": 75,
+          "max_day": 99,
+          "first_delay_seconds": [20, 50],
+          "repeat_delay_seconds": [300, 360],
+          "caught_feed_penalty": 100,
+          "overtime_minutes": 45,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 62 },
+            { "map_id": "MAP003", "weight": 13 },
+            { "map_id": "MAP004", "weight": 15 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        },
+        {
+          "min_day": 100,
+          "max_day": 999999,
+          "first_delay_seconds": [20, 45],
+          "repeat_delay_seconds": [300, 330],
+          "caught_feed_penalty": 100,
+          "overtime_minutes": 50,
+          "destination_weights": [
+            { "map_id": "MAP001", "weight": 64 },
+            { "map_id": "MAP003", "weight": 12 },
+            { "map_id": "MAP004", "weight": 14 },
+            { "map_id": "MAP005", "weight": 10 }
+          ]
+        }
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "map_id": "MAP001",
+      "name": "工位",
+      "width": 12,
+      "height": 16,
+      "available_phases": [
+        "work",
+        "gate",
+        "overtime"
+      ],
+      "portals": [
+        {
+          "portal_id": "P001",
+          "target_map_id": "MAP002",
+          "target_portal_id": "P002",
+          "position": [
+            11,
+            8
+          ],
+          "available_phases": [
+            "work"
+          ]
+        },
+        {
+          "portal_id": "P003",
+          "target_map_id": "MAP003",
+          "target_portal_id": "P004",
+          "position": [
+            9,
+            8
+          ],
+          "available_phases": [
+            "work"
+          ]
+        },
+        {
+          "portal_id": "P005",
+          "target_map_id": "MAP004",
+          "target_portal_id": "P006",
+          "position": [
+            6,
+            14
+          ],
+          "available_phases": [
+            "work"
+          ]
+        },
+        {
+          "portal_id": "P007",
+          "target_map_id": "MAP005",
+          "target_portal_id": "P008",
+          "position": [
+            11,
+            14
+          ],
+          "available_phases": [
+            "work"
+          ]
+        },
+        {
+          "portal_id": "P009",
+          "target_map_id": "MAP006",
+          "target_portal_id": "P010",
+          "position": [
+            11,
+            15
+          ],
+          "available_phases": [
+            "gate",
+            "overtime"
+          ]
+        }
+      ],
+      "gate_position": null
+    },
+    {
+      "map_id": "MAP002",
+      "name": "老板办公室",
+      "width": 8,
+      "height": 8,
+      "available_phases": [
+        "work",
+        "gate",
+        "overtime"
+      ],
+      "portals": [
+        {
+          "portal_id": "P002",
+          "target_map_id": "MAP001",
+          "target_portal_id": "P001",
+          "position": [
+            4,
+            7
+          ],
+          "available_phases": [
+            "work",
+            "gate",
+            "overtime"
+          ]
+        }
+      ],
+      "gate_position": null
+    },
+    {
+      "map_id": "MAP003",
+      "name": "茶水间",
+      "width": 7,
+      "height": 8,
+      "available_phases": [
+        "work",
+        "gate",
+        "overtime"
+      ],
+      "portals": [
+        {
+          "portal_id": "P004",
+          "target_map_id": "MAP001",
+          "target_portal_id": "P003",
+          "position": [
+            3.5,
+            7
+          ],
+          "available_phases": [
+            "work",
+            "gate",
+            "overtime"
+          ]
+        }
+      ],
+      "gate_position": null
+    },
+    {
+      "map_id": "MAP004",
+      "name": "洗手间",
+      "width": 7,
+      "height": 8,
+      "available_phases": [
+        "work",
+        "gate",
+        "overtime"
+      ],
+      "portals": [
+        {
+          "portal_id": "P006",
+          "target_map_id": "MAP001",
+          "target_portal_id": "P005",
+          "position": [
+            3.5,
+            7
+          ],
+          "available_phases": [
+            "work",
+            "gate",
+            "overtime"
+          ]
+        }
+      ],
+      "gate_position": null
+    },
+    {
+      "map_id": "MAP005",
+      "name": "消防楼梯",
+      "width": 8,
+      "height": 14,
+      "available_phases": [
+        "work",
+        "gate",
+        "overtime"
+      ],
+      "portals": [
+        {
+          "portal_id": "P008",
+          "target_map_id": "MAP001",
+          "target_portal_id": "P007",
+          "position": [
+            4,
+            13
+          ],
+          "available_phases": [
+            "work",
+            "gate",
+            "overtime"
+          ]
+        }
+      ],
+      "gate_position": null
+    },
+    {
+      "map_id": "MAP006",
+      "name": "大门",
+      "width": 8,
+      "height": 6,
+      "available_phases": [
+        "gate",
+        "overtime"
+      ],
+      "portals": [
+        {
+          "portal_id": "P010",
+          "target_map_id": "MAP001",
+          "target_portal_id": "P009",
+          "position": [
+            4,
+            1
+          ],
+          "available_phases": [
+            "gate",
+            "overtime"
+          ]
+        }
+      ],
+      "gate_position": [
+        4,
+        3
+      ]
+    }
+  ],
+  "spot_points": [
+    {
+      "spot_id": "SPOT002",
+      "name": "茶水间",
+      "map_id": "MAP003",
+      "action_id": "A002",
+      "minigame_id": "MG001",
+      "position": [
+        3.5,
+        4
+      ],
+      "document": "游戏1.md"
+    },
+    {
+      "spot_id": "SPOT003",
+      "name": "洗手间",
+      "map_id": "MAP004",
+      "action_id": "A003",
+      "minigame_id": "MG002",
+      "position": [
+        3.5,
+        4
+      ],
+      "document": "洗手间小游戏.md"
+    },
+    {
+      "spot_id": "SPOT004",
+      "name": "消防楼梯",
+      "map_id": "MAP005",
+      "action_id": "A004",
+      "minigame_id": "MG003",
+      "position": [
+        4,
+        7
+      ],
+      "document": "消防楼梯小游戏.md"
+    }
+  ],
+  "slack_actions": [
+    {
+      "action_id": "A002",
+      "name": "去茶水间",
+      "map_id": "MAP003",
+      "spot_type": "pantry",
+      "real_duration_seconds": 4,
+      "cooldown_game_minutes": 60
+    },
+    {
+      "action_id": "A003",
+      "name": "去洗手间",
+      "map_id": "MAP004",
+      "spot_type": "restroom",
+      "real_duration_seconds": 6,
+      "cooldown_game_minutes": 50
+    },
+    {
+      "action_id": "A004",
+      "name": "消防楼梯",
+      "map_id": "MAP005",
+      "spot_type": "fire_stair_platform",
+      "real_duration_seconds": 9,
+      "cooldown_game_minutes": 75
+    }
+  ],
+  "minigames": [
+    {
+      "minigame_id": "MG004",
+      "name": "工位玩手机",
+      "level_reward_type": "time_fast_forward",
+      "levels": [
+        {
+          "level_index": 1,
+          "time_reward_seconds": 20
+        },
+        {
+          "level_index": 2,
+          "time_reward_seconds": 25
+        },
+        {
+          "level_index": 3,
+          "time_reward_seconds": 30
+        }
+      ]
+    },
+    {
+      "minigame_id": "MG001",
+      "name": "茶水间冲咖啡",
+      "level_reward_type": "time_fast_forward",
+      "levels": [
+        {
+          "level_index": 1,
+          "time_reward_seconds": 30
+        },
+        {
+          "level_index": 2,
+          "time_reward_seconds": 35
+        },
+        {
+          "level_index": 3,
+          "time_reward_seconds": 40
+        }
+      ]
+    },
+    {
+      "minigame_id": "MG002",
+      "name": "洗手间发呆",
+      "level_reward_type": "time_fast_forward",
+      "levels": [
+        {
+          "level_index": 1,
+          "time_reward_seconds": 25
+        },
+        {
+          "level_index": 2,
+          "time_reward_seconds": 30
+        },
+        {
+          "level_index": 3,
+          "time_reward_seconds": 35
+        }
+      ]
+    },
+    {
+      "minigame_id": "MG003",
+      "name": "消防楼梯",
+      "level_reward_type": "time_fast_forward",
+      "levels": [
+        {
+          "level_index": 1,
+          "time_reward_seconds": 45
+        },
+        {
+          "level_index": 2,
+          "time_reward_seconds": 55
+        },
+        {
+          "level_index": 3,
+          "time_reward_seconds": 65
+        }
+      ]
+    }
+  ],
+  "day_templates": [
+    {
+      "level_id": "L001",
+      "name": "普通工作日",
+      "active_spot_ids": [
+        "SPOT002",
+        "SPOT003",
+        "SPOT004"
+      ],
+      "gate_map_id": "MAP006",
+      "available_map_ids": [
+        "MAP001",
+        "MAP002",
+        "MAP003",
+        "MAP004",
+        "MAP005",
+        "MAP006"
+      ],
+      "player_start_map_id": "MAP001",
+      "player_start": [
+        1,
+        8
+      ],
+      "boss_instances": [
+        {
+          "boss_id": "M001",
+          "work_patrol_map_id": "MAP001",
+          "work_patrol_path": [
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

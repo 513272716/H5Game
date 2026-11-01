@@ -1,0 +1,68 @@
+{
+  "主场景": {
+    "美术资源": [
+      "assets\\resources\\textures\\main\\bg.jpg",
+      "assets\\resources\\textures\\main\\ui_1.png",
+      "assets\\resources\\textures\\main\\ui_2.png",
+      "assets\\resources\\textures\\main\\ui_3.png",
+      "assets\\resources\\textures\\main\\ui_4.png",
+      "assets\\resources\\textures\\main\\ui_5.png",
+      "assets\\resources\\textures\\main\\zg.jpg",
+      "assets\\resources\\textures\\settings\\ui_1.png",
+      "assets\\resources\\textures\\settings\\ui_2.png",
+      "assets\\resources\\textures\\settings\\ui_3.png",
+      "assets\\resources\\textures\\settings\\ui_4.png",
+      "assets\\resources\\textures\\settings\\ui_5.png",
+      "assets\\resources\\textures\\settings\\ui_6.png",
+      "assets\\resources\\textures\\settings\\ui_7.png",
+      "assets\\resources\\textures\\settings\\ui_8.png",
+      "assets\\resources\\textures\\loading\\jz_bg.jpg",
+      "assets\\resources\\textures\\loading\\jz_ui_1.png",
+      "assets\\resources\\textures\\loading\\jz_ui_2.png",
+      "assets\\resources\\textures\\loading\\jz_ui_3.png"
+    ],
+    "音乐资源": [
+      "assets\\resources\\audio\\BGM.mp3",
+      "assets\\resources\\audio\\YX.mp3"
+    ],
+    "配置资源": [
+      "assets\\resources\\config\\resource_load_manifest.json"
+    ]
+  },
+  "游戏场景": {
+    "美术资源": [
+      "assets\\resources\\textures\\game\\bg.jpg",
+      "assets\\resources\\textures\\game\\ui_1.png",
+      "assets\\resources\\textures\\game\\ui_2.png",
+      "assets\\resources\\textures\\game\\ui_3.png",
+      "assets\\resources\\textures\\game\\ui_4.png",
+      "assets\\resources\\textures\\pause\\pause_ui_1.png",
+      "assets\\resources\\textures\\pause\\pause_ui_2.png",
+      "assets\\resources\\textures\\pause\\pause_ui_3.png",
+      "assets\\resources\\textures\\pause\\pause_ui_4.png",
+      "assets\\resources\\textures\\pause\\pause_ui_5.png",
+      "assets\\resources\\textures\\offwork\\offwork_ui_1.png",
+      "assets\\resources\\textures\\offwork\\offwork_ui_2.png",
+      "assets\\resources\\textures\\offwork\\offwork_ui_3.png",
+      "assets\\resources\\textures\\offwork\\offwork_ui_4.png",
+      "assets\\resources\\textures\\offwork\\offwork_ui_5.png",
+      "assets\\resources\\textures\\offwork\\offwork_ui_6.png",
+      "assets\\resources\\textures\\offwork\\offwork_ui_7.png",
+      "assets\\resources\\textures\\offwork\\offwork_ui_8.png",
+      "assets\\resources\\textures\\offwork\\offwork_ui_9.png",
+      "assets\\resources\\textures\\game_over\\ui_1.png",
+      "assets\\resources\\textures\\game_over\\ui_3.png",
+      "assets\\resources\\textures\\game_over\\ui_4.png",
+      "assets\\resources\\textures\\game_over\\ui_5.png",
+      "assets\\resources\\textures\\game_over\\ui_6.png"
+    ],
+    "音乐资源": [
+      "assets\\resources\\audio\\BGM.mp3",
+      "assets\\resources\\audio\\YX.mp3"
+    ],
+    "配置资源": [
+      "assets\\resources\\config\\fish_simulator_config.json",
+      "assets\\resources\\config\\ad_config.json"
+    ]
+  }
+}
